@@ -16,8 +16,20 @@
   --portfolio-buttons-active-color: #ffffff;
 }
 
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 /* страница */
 body {
+  margin: 0;
+
   background-color: var(--primery-bg-color);
   color: var(--primery-text-color);
 
@@ -128,13 +140,13 @@ body {
 .features-title {
   color: var(--primery-text-color);
 
-  font-weight: 400;
-  line-height: 1.7;
+  line-height: 1.14;
 }
 
 .features-text {
   color: var(--title-text-color);
 
+  font-weight: 400;
   line-height: 1.7;
 }
 
