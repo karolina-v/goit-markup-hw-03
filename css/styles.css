@@ -16,20 +16,8 @@
   --portfolio-buttons-active-color: #ffffff;
 }
 
-html {
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 /* страница */
 body {
-  margin: 0;
-
   background-color: var(--primery-bg-color);
   color: var(--primery-text-color);
 
@@ -37,6 +25,14 @@ body {
   font-weight: 700;
   font-size: 14px;
   letter-spacing: 0.03em;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+
+  outline: 1px solid tomato;
 }
 
 /* логотип в шапке */
@@ -55,6 +51,9 @@ body {
 
 /* маркеры в списках */
 .list {
+  padding: 0;
+  margin: 0;
+
   list-style: none;
 }
 
@@ -94,16 +93,21 @@ body {
 /* баннер */
 .banner {
   background-color: var(--second-bg-color);
+
+  text-align: center;
 }
 
 .banner-title {
+  margin-top: 0;
+  margin-bottom: 30px;
+
   color: var(--banner-text-color);
 
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
+  text-transform: uppercase;
 }
 
 /* кнопка в баннере */
@@ -119,6 +123,10 @@ body {
 }
 
 .buttons.banner-button {
+  padding: 10px 32px;
+  min-width: 200px;
+  border: transparent;
+
   color: var(--banner-text-color);
   background-color: var(--accent-color);
 
@@ -127,8 +135,16 @@ body {
   letter-spacing: 0.06em;
 }
 
-/* названия всех секций, кроме баннера */
+/* все секции, кроме баннера */
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .section-title {
+  margin-top: 0;
+  margin-bottom: 50px;
+
   color: var(--primery-text-color);
 
   font-size: 36px;
@@ -138,12 +154,19 @@ body {
 
 /* особенности */
 .features-title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
   color: var(--primery-text-color);
 
   line-height: 1.14;
+  text-transform: uppercase;
 }
 
 .features-text {
+  margin-top: 0;
+  margin-bottom: 0;
+
   color: var(--title-text-color);
 
   font-weight: 400;
@@ -151,7 +174,7 @@ body {
 }
 
 /* наша команда */
-.section-team {
+.section.team {
   background-color: var(--team-bg-color);
 }
 
@@ -160,6 +183,8 @@ body {
 }
 
 .member-name {
+  padding-bottom: 10px;
+
   color: var(--primery-text-color);
 
   font-weight: 500;
@@ -169,6 +194,8 @@ body {
 }
 
 .member-position {
+  padding-bottom: 30px;
+
   color: var(--title-text-color);
 
   font-weight: 400;
