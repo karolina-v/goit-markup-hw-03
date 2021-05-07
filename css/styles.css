@@ -14,6 +14,12 @@
   --logo-footer-part-color: #ffffff;
   --address-footer-color: #ffffff;
   --portfolio-buttons-active-color: #ffffff;
+  --card-border-color: #eeeeee;
+  --card-gap: 30px;
+  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  --filters-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* страница */
@@ -27,16 +33,37 @@ body {
   letter-spacing: 0.03em;
 }
 
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-  width: 1200px;
 
   outline: 1px solid tomato;
 }
 
+/* шапка */
+.container.header {
+  display: flex;
+  align-items: center;
+}
+
+.header-links {
+  display: flex;
+  align-items: center;
+}
+
 /* логотип в шапке */
 .logo {
+  margin-right: 93px;
+
   color: var(--logo-text-color);
 
   font-family: Raleway, sans-serif;
@@ -58,7 +85,19 @@ body {
 }
 
 /* навигация сайта */
+.site-nav {
+  display: flex;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--primery-text-color);
 }
 
@@ -73,7 +112,20 @@ body {
 }
 
 /* контакты в шапке */
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts .item:not(:last-child) {
+  margin-right: 50px;
+}
+
 .contacts .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--title-text-color);
 }
 
@@ -99,7 +151,7 @@ body {
 
 .banner-title {
   margin-top: 0;
-  margin-bottom: 30px;
+  margin-bottom: var(--card-gap);
 
   color: var(--banner-text-color);
 
@@ -126,6 +178,7 @@ body {
   padding: 10px 32px;
   min-width: 200px;
   border: transparent;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   color: var(--banner-text-color);
   background-color: var(--accent-color);
@@ -153,6 +206,19 @@ body {
 }
 
 /* особенности */
+.features {
+  display: flex;
+}
+
+.features .item {
+  width: calc((100% - 90px) / 4);
+  /* width: 270px; */
+}
+
+.features .item:not(:last-child) {
+  margin-right: var(--card-gap);
+}
+
 .features-title {
   margin-top: 0;
   margin-bottom: 10px;
@@ -173,17 +239,45 @@ body {
   line-height: 1.7;
 }
 
+/* чем мы занимаемся */
+.img-work {
+  display: flex;
+}
+
+.img-work .item {
+  width: calc((100% - 60px) / 3);
+}
+
+.img-work .item:not(:last-child) {
+  margin-right: var(--card-gap);
+}
+
 /* наша команда */
 .section.team {
   background-color: var(--team-bg-color);
 }
 
+.team {
+  display: flex;
+}
+
 .team-member {
+  width: calc((100% - 90px) / 4);
+  /* width: 270px; */
+  border-radius: 0px 0px 4px 4px;
+  overflow: hidden;
+  box-shadow: var(--card-shadow);
+
   background-color: var(--primery-bg-color);
 }
 
+.team-member:not(:last-child) {
+  margin-right: var(--card-gap);
+}
+
 .member-name {
-  padding-bottom: 10px;
+  margin-top: 0;
+  margin-bottom: 10px;
 
   color: var(--primery-text-color);
 
@@ -193,8 +287,13 @@ body {
   text-align: center;
 }
 
+.team-content {
+  padding: 30px 0;
+}
+
 .member-position {
-  padding-bottom: 30px;
+  margin-top: 0;
+  margin-bottom: 0;
 
   color: var(--title-text-color);
 
@@ -239,7 +338,20 @@ body {
 }
 
 /* стили для страницы Портфолио */
+.btns-filters {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.btns-filters .item:not(:last-child) {
+  margin-right: 8px;
+}
+
 .buttons.filter {
+  padding: 6px 22px;
+  border: transparent;
+
   color: var(--primery-text-color);
   background-color: var(--buttons-bg-color);
 
@@ -253,13 +365,37 @@ body {
 .buttons.filter:active {
   color: var(--portfolio-buttons-active-color);
   background-color: var(--accent-color);
+  box-shadow: var(--filters-shadow);
+}
+
+.projects {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .project {
+  width: calc((100% - 60px) / 3);
+  /* width: 370px; */
+  border: 1px solid var(--card-border-color);
+  box-sizing: border-box;
+
   background-color: var(--primery-bg-color);
 }
 
+.project:not(:nth-child(3n)) {
+  margin-right: var(--card-gap);
+}
+
+.project:not(:nth-last-child(-n + 3)) {
+  margin-bottom: var(--card-gap);
+}
+
+.project-content {
+  padding: 20px 24px;
+}
 .project-name {
+  margin-bottom: 4px;
+
   color: var(--primery-text-color);
 
   font-size: 18px;
@@ -268,6 +404,8 @@ body {
 }
 
 .project-type {
+  margin: 0;
+
   color: var(--title-text-color);
 
   font-weight: 400;

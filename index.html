@@ -18,8 +18,8 @@
     <body>
         <!-- Шапка -->
         <header class="page-header">
-            <div class="container">
-                <nav>
+            <div class="container header">
+                <nav class="header-links"> 
                     <!-- Логотип, название сайта и ссылка на Главную-->
                     <a class="logo" href="/">
                         Web<span class="logo-part">Studio</span>
@@ -27,15 +27,15 @@
 
                     <!-- Навигация в шапке -->
                     <ul class="site-nav list"> 
-                        <li><a href="./index.html" class="link current">Студия</a></li>
-                        <li><a href="./portfolio.html" class="link">Портфолио</a></li>
-                        <li><a href="./contacts.html" class="link">Контакты</a></li>
+                        <li class="item"><a href="./index.html" class="link current">Студия</a></li>
+                        <li class="item"><a href="./portfolio.html" class="link">Портфолио</a></li>
+                        <li class="item"><a href="./contacts.html" class="link">Контакты</a></li>
                     </ul>
                 </nav>
 
                 <ul class="contacts list">
-                    <li><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
-                    <li><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
+                    <li class="item"><a href="mailto:info@devstudio.com" class="link">info@devstudio.com</a></li>
+                    <li class="item"><a href="tel:+380961111111" class="link">+38 096 111 11 11</a></li>
                 </ul>
             </div>
         </header>
@@ -53,19 +53,19 @@
                     <!-- Даный заголовок нужно будет убрать с помощью CSS -->
                     <h2 class="section-title">Особенности</h2>
                     <ul class="features list">
-                        <li>
+                        <li class="item">
                             <h3 class="features-title">ВНИМАНИЕ К ДЕТАЛЯМ</h3>
                             <p class="features-text">Идейные соображения, а также начало повседневной работы по формированию позиции.</p>
                         </li>
-                        <li>
+                        <li class="item">
                             <h3 class="features-title">ПУНКТУАЛЬНОСТЬ</h3>
                             <p class="features-text">Задача организации, в особенности же рамки и место обучения кадров влечет за собой.</p>
                         </li>
-                        <li>
+                        <li class="item">
                             <h3 class="features-title">ПЛАНИРОВАНИЕ</h3>
                             <p class="features-text">Равным образом консультация с широким активом в значительной степени обуславливает.</p>
                         </li>
-                        <li>
+                        <li class="item">
                             <h3 class="features-title">СОВРЕМЕННЫЕ ТЕХНОЛОГИИ</h3>
                             <p class="features-text">Значимость этих проблем настолько очевидна, что реализация плановых заданий.</p>
                         </li>
@@ -77,10 +77,10 @@
             <section class="section">
                 <div class="container">
                     <h2 class="section-title">Чем мы занимаемся</h2>
-                    <ul class="list">
-                        <li><img src="./images/img.jpg" alt="Компьютер" width="370" height="294"></li>
-                        <li><img src="./images/img2.jpg" alt="Телефон" width="370" height="294"></li>
-                        <li><img src="./images/img3.jpg" alt="Планшет" width="370" height="294"></li>
+                    <ul class="img-work list">
+                        <li class="item"><img src="./images/img.jpg" alt="Компьютер" width="370" height="294"></li>
+                        <li class="item"><img src="./images/img2.jpg" alt="Телефон" width="370" height="294"></li>
+                        <li class="item"><img src="./images/img3.jpg" alt="Планшет" width="370" height="294"></li>
                     </ul>
                 </div>
             </section>
@@ -92,23 +92,31 @@
                     <ul class="team list">
                         <li class="team-member">
                             <img src="./images/photo1.jpg" alt="Игорь Демьяненко" width="270" height="260">
-                            <h3 class="member-name">Игорь Демьяненко</h3>
-                            <p class="member-position">Product Designer</p>
+                            <div class="team-content">
+                                <h3 class="member-name">Игорь Демьяненко</h3>
+                                <p class="member-position">Product Designer</p>
+                            </div>
                         </li>
                         <li class="team-member">
                             <img src="./images/photo2.jpg" alt="Ольга Репина" width="270" height="260">
-                            <h3 class="member-name">Ольга Репина</h3>
-                            <p class="member-position">Frontend Developer</p>
+                            <div class="team-content">
+                                <h3 class="member-name">Ольга Репина</h3>
+                                <p class="member-position">Frontend Developer</p>
+                            </div>
                         </li>
                         <li class="team-member">
                             <img src="./images/photo3.jpg" alt="Николай Тарасов" width="270" height="260">
-                            <h3 class="member-name">Николай Тарасов</h3>
-                            <p class="member-position">Marketing</p>
+                            <div class="team-content">
+                                <h3 class="member-name">Николай Тарасов</h3>
+                                <p class="member-position">Marketing</p>
+                            </div>
                         </li>
                         <li class="team-member">
                             <img src="./images/photo4.jpg" alt="Михаил Ермаков" width="270" height="260">
-                            <h3 class="member-name">Михаил Ермаков</h3>
-                            <p class="member-position">UI Designer</p>
+                            <div class="team-content">
+                                <h3 class="member-name">Михаил Ермаков</h3>
+                                <p class="member-position">UI Designer</p>
+                            </div>
                         </li>
                     </ul>
                 </div>
