@@ -3,7 +3,9 @@
   --title-text-color: #757575;
   --accent-color: #2196f3;
   --logo-text-color: #2196f3;
+  --border-header-color: #ececec;
   --banner-text-color: #ffffff;
+  --banner-bg-hover-color: #188ce8;
   --contacts-header-color: #757575;
   --contacts-footer-color: rgba(255, 255, 255, 0.6);
   --primery-bg-color: #ffffff;
@@ -45,11 +47,13 @@ img {
   padding-right: 15px;
   margin-left: auto;
   margin-right: auto;
-
-  outline: 1px solid tomato;
 }
 
 /* шапка */
+.page-header {
+  border-bottom: 1px solid var(--border-header-color);
+}
+
 .container.header {
   display: flex;
   align-items: center;
@@ -188,6 +192,11 @@ img {
   letter-spacing: 0.06em;
 }
 
+.buttons.banner-button:hover,
+.buttons.banner-button:focus {
+  background-color: var(--banner-bg-hover-color);
+}
+
 /* все секции, кроме баннера */
 .section {
   padding-top: 94px;
@@ -308,12 +317,26 @@ img {
   background-color: var(--second-bg-color);
 }
 
+.footer .container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
 .footer .logo-part {
   color: var(--logo-footer-part-color);
 }
 
+.footer .logo {
+  display: inline-block;
+
+  margin-right: 0;
+  margin-bottom: 20px;
+}
+
 /* address */
 .footer .address {
+  width: 231px;
+
   color: var(--address-footer-color);
 
   font-style: normal;
@@ -321,13 +344,19 @@ img {
   line-height: 1.7;
 }
 
+.footer .address-text {
+  margin-top: 0;
+  margin-bottom: 9px;
+}
+
 /* контакты в подвале */
+.footer .item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .footer .link {
   color: var(--contacts-footer-color);
 
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.7;
   text-decoration: none;
 }
 
@@ -376,7 +405,6 @@ img {
 .project {
   width: calc((100% - 60px) / 3);
   /* width: 370px; */
-  border: 1px solid var(--card-border-color);
   box-sizing: border-box;
 
   background-color: var(--primery-bg-color);
@@ -392,7 +420,13 @@ img {
 
 .project-content {
   padding: 20px 24px;
+
+  border-top: transparent;
+  border-bottom: 1px solid var(--card-border-color);
+  border-right: 1px solid var(--card-border-color);
+  border-left: 1px solid var(--card-border-color);
 }
+
 .project-name {
   margin-bottom: 4px;
 
