@@ -148,6 +148,9 @@ img {
 
 /* баннер */
 .banner {
+  padding-top: 200px;
+  padding-bottom: 200px;
+
   background-color: var(--second-bg-color);
 
   text-align: center;
@@ -249,6 +252,10 @@ img {
 }
 
 /* чем мы занимаемся */
+.section.working {
+  padding-top: 0;
+}
+
 .img-work {
   display: flex;
 }
@@ -315,9 +322,6 @@ img {
 /* подвал */
 .footer {
   background-color: var(--second-bg-color);
-}
-
-.footer .container {
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -335,8 +339,6 @@ img {
 
 /* address */
 .footer .address {
-  width: 231px;
-
   color: var(--address-footer-color);
 
   font-style: normal;
@@ -428,6 +430,7 @@ img {
 }
 
 .project-name {
+  margin-top: 0;
   margin-bottom: 4px;
 
   color: var(--primery-text-color);
